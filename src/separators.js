@@ -39,7 +39,8 @@ function thousands_separators(num){
 		}
 		
 		strReturn = strReturn+suf;
-		return console.log(strReturn);   
+		alert(strReturn);
+		//return strReturn;   
 	}else{
 		alert("not a number");
 	}
