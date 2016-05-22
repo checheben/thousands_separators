@@ -11,7 +11,7 @@ function thousands_separators(num){
 		var strReturn = '';
 		if(numPoint > 0){
 			pre = str.substring(0,numPoint);
-			suf = str.substring(numPoint);
+			suf = str.substring(numPoint+1);
 		}else if(numPoint == 0){
 			pre = '';
 			suf = str.substring(1);
@@ -37,12 +37,14 @@ function thousands_separators(num){
 				}
 			}
 		}
+		if(suf){
+			strReturn = strReturn+'.'+suf;
+		}
 		
-		strReturn = strReturn+suf;
-		alert(strReturn);
-		//return strReturn;   
+		return strReturn;
+		 
 	}else{
-		alert("not a number");
+		return "not a number";
 	}
 }
 
